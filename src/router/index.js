@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import projects from '../views/projects.vue'
 import experience from '../views/experience.vue'
 import skills from '../views/skills.vue'
-import proj from '../components/project.vue'
+// import proj from '../components/project.vue'
 
 Vue.use(VueRouter)
 
@@ -28,11 +28,12 @@ const routes = [{
         name: 'skills',
         component: skills
     },
-    {
-        path: '/projec-details',
-        name: 'project',
-        component: proj
-    },
+    // {
+    //     path: '/projec-details',
+    //     name: 'project',
+    //     component: proj,
+    //     props: true
+    // },
 ]
 
 const router = new VueRouter({

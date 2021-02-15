@@ -37,6 +37,9 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
+        <v-icon>mdi-behance</v-icon>
+      </v-btn>
+      <v-btn icon>
         <v-icon>mdi-github</v-icon>
       </v-btn>
 
@@ -58,7 +61,7 @@ export default {
     links: [
       { icon: "view-dashboard", text: "Overview", route: "/", setColor:'#9652ff'  },
       { icon: "chart-line", text: "My Experience", route: "/experience", setColor:'#ffa000' },
-      { icon: "folder", text: "My Projects", route: "/projects" , setColor:'#ffa000'},
+      { icon: "folder", text: "My Projects", route: "/projects" , setColor:'#FF6060'},
       { icon: "lightbulb-on", text: "My Skills", route: "/skills", setColor:'#1E88E5 ' },
     ]
   }),

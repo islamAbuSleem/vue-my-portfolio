@@ -23,6 +23,10 @@ export default {
 };
 </script>
 <style lang="scss">
+.about-me {
+  text-shadow: 0 0 6px grey;
+  font-size: 18px !important;
+}
   .v-application--wrap{
     background-color: #f1f1f1;
     .v-card:not(.v-sheet--tile):not(.v-card--shaped){
