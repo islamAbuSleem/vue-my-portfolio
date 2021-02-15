@@ -2,7 +2,7 @@
   <nav>
     <v-navigation-drawer v-model="drawer" :mini-variant="mini" permanent app :color="drawerColor" >
       <v-list dense>
-        <v-list-item link class="justify-center" disabled>
+        <v-list-item link class="j  ustify-center" disabled>
           <div class="text-center" v-if="!mini">
             <v-list-item-avatar size="150">
               <img src="../assets/DSC_0003.png" alt="islam" class="my-img" />
@@ -65,7 +65,7 @@ export default {
   methods:{
     changeColor(color){
        this.drawerColor = color
-    }
+    },
   }
 };
 
@@ -78,7 +78,7 @@ export default {
 }
 .my-img-sm{
     border: 2px solid #fff;
-  margin-left:10% ;
+  margin-left:-20% ;
 }
 .avatar-title{
   color: #d4dbf5!important;
