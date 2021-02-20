@@ -70,7 +70,7 @@ export default {
   methods:{
       downloadFile() {
       axios({
-        url: "https://media-exp1.licdn.com/dms/document/C4D2DAQHIpO3JQ_hSgA/profile-treasury-document-pdf-analyzed/0?e=1590739200&v=beta&t=HfIOnHFfPs2wMZLMCa5DprLxXkNBlvRZ-7-UCm_b1E4",
+        url: "https://media-exp1.licdn.com/dms/document/C4D2DAQHIpO3JQ_hSgA/profile-treasury-document-pdf-analyzed/0/1580907306458?e=1613912400&v=beta&t=S6eSNnjnThiSRyRI0dVO0663CKMscuJybuVmhVXqLYA",
         method: "GET",
         responseType: "blob" // important
       }).then(response => {
