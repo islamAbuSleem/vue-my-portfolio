@@ -57,7 +57,7 @@ export default {
   },
   data: () => ({
     mini: true,
-    drawerColor:'#9652ff',
+    drawerColor: window.localStorage.getItem('drawerColor') || '#9652ff',
     links: [
       { icon: "view-dashboard", text: "Overview", route: "/", setColor:'#9652ff'  },
       { icon: "chart-line", text: "My Experience", route: "/experience", setColor:'#ffa000' },
@@ -65,11 +65,18 @@ export default {
       { icon: "lightbulb-on", text: "My Skills", route: "/skills", setColor:'#1E88E5 ' },
     ]
   }),
+  created(){
+    if(this.$route.path == '/'){
+      this.changeColor('#9652ff')
+    }
+  },
   methods:{
     changeColor(color){
-       this.drawerColor = color
+       this.drawerColor = color;
+       window.localStorage.setItem('drawerColor', color);
+       console.log(this.$route.path)
     },
-  }
+  },
 };
 
 // this.$vuetify.theme.dark = true

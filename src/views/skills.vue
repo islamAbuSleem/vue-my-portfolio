@@ -33,20 +33,15 @@ export default {
         {id: "3", name: "sass", rate: "4", src: require("../assets/sass.png") },
         {id: "4", name: "JavaScript", rate: "4", src: require("../assets/javascript.png") },
         {id: "5", name: "jQuery", rate: "4", src: require("../assets/jquery-.png") },
-        {id: "6", name: "Bootstrap 4", rate: "5", src: require("../assets/bootstrap.png") },
+        {id: "6", name: "Bootstrap", rate: "5", src: require("../assets/bootstrap.png") },
         {id: "7", name: "Vue.js", rate: "4", src: require("../assets/logo.png") },
-        {id: "8", name: "Vuetify", rate: "3" , src: require("../assets/vuetify.png")},
+        {id: "8", name: "Vuetify", rate: "5" , src: require("../assets/vuetify.png")},
         {id: "9", name: "ES6", rate: "4", src: require("../assets/es6.png") },
-        {id: "10", name: "JSON", rate: "5", src: require("../assets/json.png") },
         {id: "11", name: "AJAX", rate: "4", src: require("../assets/ajax.png") },
-        {id: "12", name: "Gulp.js", rate: "3", src: require("../assets/gulp.png") },
-        {id: "13", name: "Wordpress custimization", rate: "5", src: require("../assets/wordpress.png") },
-        {id: "14", name: "Wordpress theme development", rate: "3", src: require("../assets/wordpress.png") }
       ],
       backend: [
-        {id:"1", name: "Php", rate: "2" , src: require("../assets/php.png")},
-        {id:"2", name: "python 3", rate: "2", src: require("../assets/python.png") },
-        {id:"3", name: "node.js", rate: "1", src: require("../assets/node.png") }
+        {id:"3", name: "Node.js", rate: "3", src: require("../assets/node.png") },
+        {id:"3", name: "Express.js", rate: "3"},
       ],
       database: [
         {id:"1", name: "MySQL", rate: "4", src: require("../assets/mysql.jpg") },

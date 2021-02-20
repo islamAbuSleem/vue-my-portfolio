@@ -7,16 +7,19 @@
           :inset="inset"
           class="text-capitalize font-weight-medium amber--text text--darken-2 about-me mb-5"
         >experience</v-subheader>
-        <v-row class="pb-5">
-          <v-col xs="9" sm="9" offset="2" class="d-flex align-center">
+          <div class="d-flex align-center work-exper">
             <v-expansion-panels hover="true" multiple="true" focusable>
               <v-expansion-panel v-for="(item,i) in experience" :key="i">
-                <v-expansion-panel-header class="font-weight-bold grey--text text--darken-4 "><span class="blue-grey--text text--darken-2">{{item.title}}</span> <span class="text-right blue-grey--text text--lighten-1 mr-5">{{item.from}} - {{item.to}}</span></v-expansion-panel-header>
-                <v-expansion-panel-content><p v-for="(desc,x) in item.desc" :key="x" class="mt-2 grey--text text--darken-2">{{desc}}</p></v-expansion-panel-content>
+                <v-expansion-panel-header class="font-weight-bold grey--text text--darken-4 ">
+                  <v-row>
+                    <v-col cols="12" md="6"><span class="blue-grey--text text--darken-2">{{item.title}}</span></v-col>
+                    <v-col cols="12" md="6" class="text-md-right"><span class="blue-grey--text mr-5">{{item.from}} - {{item.to}}</span></v-col>
+                  </v-row>
+                  </v-expansion-panel-header>
+                <v-expansion-panel-content><ul><li v-for="(desc,x) in item.desc" :key="x" class="mt-2 grey--text text--darken-2">{{desc}}</li></ul></v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
-          </v-col>
-        </v-row>
+          </div>
         <v-btn @click="downloadFile()" color="error" class="my-5 mx-auto d-block">download my CV</v-btn>
 
       </template>
@@ -40,13 +43,13 @@ export default {
           title: "OraceDBA at TransIT",
           from: "OCT 2017",
           to: "Current",
-          desc: ["Managing Oracle DB and solving some related issues.", "monitor Egyptain Railways ticketing system using Weblogic and trying to fix any issue would cause to system slow or down.", "Fixing train stations DB problems."]
+          desc: ["Managing Oracle DB and solving some related issues.", "monitor Egyptain Railways ticketing system using Weblogic and trying to fix any issue would cause to system slow or down.", "Resolving train stations DB problems."]
         },
         {
           title: "Frontend at IHorizons",
           from: "Aug 2019",
           to: "Nov 2019",
-          desc: ["Revamping websites frontend that's built on Drupal."]
+          desc: ["Developing websites on Drupal 8 based on ziplin or indesign UI designs.","Revamping some websites built using Drupal based on new design."]
         },
         {
           title: "Software engineer at ITValley",
@@ -88,5 +91,12 @@ export default {
 .about-me {
   text-shadow: 0 0 6px goldenrod;
   font-size: 18px;
+}
+.work-exper{
+  width: 60%;
+  margin: auto;
+  .v-expansion-panel{
+    margin: 2px auto;
+  }
 }
 </style>
