@@ -1,6 +1,6 @@
 <template>
   <div class="experience">
-    <v-subheader :inset="inset" class="text-capitalize">my experience</v-subheader>
+    <v-subheader :inset="inset" class="text-capitalize">experience</v-subheader>
     <v-container>
       <template>
         <v-subheader

@@ -19,7 +19,12 @@
         </v-list-item>
         <v-list-item link v-for="link in links" :key="link.text" router :to="link.route" @click="changeColor(link.setColor)">
           <v-list-item-action>
-            <v-icon class="white--text">mdi-{{link.icon}}</v-icon>
+             <v-tooltip right >
+            <template v-slot:activator="{ on, attrs }">
+            <v-icon v-bind="attrs" v-on="on" class="white--text">mdi-{{link.icon}}</v-icon>
+            </template>
+                                  <span>{{link.text}}</span>
+                                </v-tooltip>
           </v-list-item-action>
 
           <v-list-item-content>
@@ -39,11 +44,11 @@
       <v-btn icon>
         <v-icon>mdi-behance</v-icon>
       </v-btn>
-      <v-btn icon>
+      <v-btn icon @click="openLink(github)">
         <v-icon>mdi-github</v-icon>
       </v-btn>
 
-      <v-btn icon class="mr-5">
+      <v-btn icon class="mr-5" @click="openLink(linkedin)">
         <v-icon>mdi-linkedin</v-icon>
       </v-btn>
     </v-app-bar>
@@ -58,11 +63,14 @@ export default {
   data: () => ({
     mini: true,
     drawerColor: window.localStorage.getItem('drawerColor') || '#9652ff',
+    github:'https://github.com/islamAbuSleem',
+    linkedin:'https://www.linkedin.com/in/islamabusleem/',
     links: [
       { icon: "view-dashboard", text: "Overview", route: "/", setColor:'#9652ff'  },
-      { icon: "chart-line", text: "My Experience", route: "/experience", setColor:'#ffa000' },
-      { icon: "folder", text: "My Projects", route: "/projects" , setColor:'#FF6060'},
-      { icon: "lightbulb-on", text: "My Skills", route: "/skills", setColor:'#1E88E5 ' },
+      { icon: "chart-line", text: "Experience", route: "/experience", setColor:'#ffa000' },
+      { icon: "folder", text: "Projects", route: "/projects" , setColor:'#FF6060'},
+      { icon: "lightbulb-on", text: "Skills", route: "/skills", setColor:'#1E88E5 ' },
+      { icon: "contacts", text: "Contacts", route: "/contacts", setColor:'#4caf50 ' },
     ]
   }),
   created(){
@@ -76,6 +84,9 @@ export default {
        window.localStorage.setItem('drawerColor', color);
        console.log(this.$route.path)
     },
+    openLink(link){
+      window.open(link)
+    }
   },
 };
 
