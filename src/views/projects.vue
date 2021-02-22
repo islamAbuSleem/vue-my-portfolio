@@ -3,18 +3,11 @@
     <v-subheader class="text-capitalize">projects</v-subheader>
     <v-container>
       <template>
-        <v-subheader
-          :inset="inset"
-          class="text-capitalize font-weight-medium about-me"
+        <v-subheader :inset="inset" class="text-capitalize font-weight-medium about-me"
           >Projects</v-subheader
         >
         <v-row>
-          <v-col
-            cols="12"
-            md="4"
-            v-for="project in Projects"
-            :key="project.title"
-          >
+          <v-col cols="12" md="4" v-for="project in Projects" :key="project.title">
             <template>
               <template>
                 <v-skeleton-loader
@@ -26,16 +19,8 @@
                 </v-skeleton-loader>
 
                 <v-hover v-slot="{ hover }" v-if="loaded">
-                  <v-card
-                    class="mx-auto"
-                    color="grey lighten-4"
-                    max-width="600"
-                  >
-                    <v-parallax
-                      :aspect-ratio="16 / 9"
-                      height="300"
-                      :src="project.src"
-                    >
+                  <v-card class="mx-auto" color="grey lighten-4" max-width="600">
+                    <v-parallax :aspect-ratio="16 / 9" height="300" :src="project.src">
                       <v-expand-transition>
                         <div
                           v-if="hover"
@@ -110,8 +95,6 @@
     </v-container>
   </div>
 </template>
-
-
 
 <script>
 export default {
@@ -288,14 +271,18 @@ export default {
   color: #ff6060;
   text-shadow: 0 0 6px #f98282;
 }
-@media only screen and (max-width: 600px) {
-  .v-parallax[data-v-63338994]{
+.v-card .v-parallax {
+  @media only screen and (max-width: 600px) {
     height: 250px !important;
   }
-  h3[data-v-63338994]{
+}
+.v-card__text h3 {
+  @media only screen and (max-width: 600px) {
     font-size: 1.4rem !important;
   }
-  div[data-v-63338994]{
+}
+.v-card__text div.title {
+  @media only screen and (max-width: 600px) {
     font-size: 1rem !important;
   }
 }

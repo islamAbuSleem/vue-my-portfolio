@@ -10,18 +10,13 @@
           <v-col cols="10" md="6">
             <h3>Lets Connect <v-icon>mdi-handshake</v-icon></h3>
             <template>
-              <v-timeline
-                class="ma-5"
-                align-top
-                :dense="$vuetify.breakpoint.smAndDown"
-              >
+              <v-timeline class="ma-5" align-top :dense="$vuetify.breakpoint.smAndDown">
                 <v-timeline-item
                   v-for="(item, i) in items"
                   :key="i"
                   :color="item.color"
                   :icon="item.icon"
                   fill-dot
-                  
                 >
                   <v-card v-if="item.contact" :color="item.color" dark>
                     <v-card-title class="title">
@@ -164,11 +159,19 @@ export default {
     color: #ffa500f2;
   }
   .v-timeline {
+    @media only screen and (max-width: 600px) {
+      margin: 20px -70px !important;
+      width: 85vw;
+    }
     .v-timeline-item {
       .v-timeline-item__body {
         .v-card {
           .v-card__title {
             font-size: 1rem !important;
+
+            @media only screen and (max-width: 600px) {
+              font-size: 0.8rem !important;
+            }
           }
         }
       }
@@ -179,27 +182,14 @@ export default {
     margin: 2% auto;
     padding: 12px;
     border-radius: 4px;
+    @media only screen and (max-width: 600px) {
+      width: 115%;
+      margin-left: -10%;
+    }
     .v-btn {
       display: flex;
       margin: auto;
     }
   }
-}
-
-
-@media only screen and (max-width: 600px) {
-  .v-timeline[data-v-2d05c2f6]{
-    margin: 20px -60px !important;
-  }
-  .contacts .v-timeline .v-timeline-item .v-timeline-item__body .v-card .v-card__title[data-v-2d05c2f6]{
-    font-size: .8rem !important;
-  }
-  .contacts form[data-v-2d05c2f6]{
-    
-    width: 115%;
-    margin-left: -10%;
-
-  }
-
 }
 </style>

@@ -9,12 +9,11 @@
           >About me</v-subheader
         >
         <blockquote class="blockquote">
-          I'm Islam, {{ today.getFullYear() - 1993 }} years old. I have passion
-          to learn and to code. I have bachelor degree in computer science. I
-          have experience as front-end developer. I used to learning on my own.
-          plus a good experience in backend using Nodejs , ExpressJS and mongoDB
-          with client Mongoose as I'm starting to write my backend by myself
-          nowadays.
+          I'm Islam, {{ today.getFullYear() - 1993 }} years old. I have passion to learn
+          and to code. I have bachelor degree in computer science. I have experience as
+          front-end developer. I used to learning on my own. plus a good experience in
+          backend using Nodejs , ExpressJS and mongoDB with client Mongoose as I'm
+          starting to write my backend by myself nowadays.
         </blockquote>
       </div>
 
@@ -30,9 +29,7 @@
               <div class="caption grey--text text-capitalize">project name</div>
             </v-col>
             <v-col cols="6">
-              <div
-                class="caption grey--text text-right text-capitalize pl-4 mr-5"
-              >
+              <div class="caption grey--text text-right text-capitalize pl-4 mr-5">
                 Status
               </div>
             </v-col>
@@ -153,18 +150,22 @@ export default {
     }
   }
 }
+.v-application .blockquote {
+  @media only screen and (max-width: 600px) {
+    font-size: 0.9rem;
+  }
+}
+.home .projects .v-card .col {
+  @media only screen and (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+}
 
-@media only screen and (max-width: 600px) {
-.blockquote[data-v-fae5bece]{
-    font-size: .9rem;
-  }
-  .col[data-v-fae5bece]{
-    font-size: .8rem;
-  }
-  .v-btn[data-v-fae5bece]{
+.projects .v-btn {
+  @media only screen and (max-width: 600px) {
     width: 20vw;
     height: 7vh;
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 }
 </style>
