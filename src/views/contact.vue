@@ -185,4 +185,21 @@ export default {
     }
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .v-timeline[data-v-2d05c2f6]{
+    margin: 20px -60px !important;
+  }
+  .contacts .v-timeline .v-timeline-item .v-timeline-item__body .v-card .v-card__title[data-v-2d05c2f6]{
+    font-size: .8rem !important;
+  }
+  .contacts form[data-v-2d05c2f6]{
+    
+    width: 115%;
+    margin-left: -10%;
+
+  }
+
+}
 </style>

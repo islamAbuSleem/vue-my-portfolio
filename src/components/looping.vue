@@ -8,7 +8,7 @@
               </v-col>
               <v-col cols="12" sm="6">
                 <div>
-                        <v-rating v-model="skill.rate" readonly size="25" background-color="amber lighten-1"
+                        <v-rating v-model="skill.rate" readonly size="23" background-color="amber lighten-1"
                        color="amber"></v-rating>
                     </div>
               </v-col>
@@ -39,4 +39,5 @@ export default {
       }
     }
 }
+
 </style>

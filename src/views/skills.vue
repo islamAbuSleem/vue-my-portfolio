@@ -3,10 +3,10 @@
     <v-subheader class="text-capitalize">Skills</v-subheader>
     <v-container>
       <template>
-        <v-subheader :inset="inset" class="text-capitalize font-weight-medium blue--text text--darken-1 about-me">web Frontend</v-subheader>
+        <v-subheader :inset="inset" class="text-capitalize font-weight-medium blue--text text--darken-1 about-me">Frontend</v-subheader>
         <looping :data="frontend" />
             <v-divider></v-divider>
-        <v-subheader :inset="inset" class="text-capitalize font-weight-medium blue--text text--darken-1 about-me">web Backend</v-subheader>
+        <v-subheader :inset="inset" class="text-capitalize font-weight-medium blue--text text--darken-1 about-me">Backend</v-subheader>
         <looping :data="backend" />
             <v-divider></v-divider>
         <v-subheader :inset="inset" class="text-capitalize font-weight-medium blue--text text--darken-1 about-me">Database</v-subheader>
@@ -70,4 +70,6 @@ export default {
   text-shadow: 0 0 6px cornflowerblue;
   font-size: 18px;
 }
+
+
 </style>

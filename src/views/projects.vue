@@ -288,4 +288,15 @@ export default {
   color: #ff6060;
   text-shadow: 0 0 6px #f98282;
 }
+@media only screen and (max-width: 600px) {
+  .v-parallax[data-v-63338994]{
+    height: 250px !important;
+  }
+  h3[data-v-63338994]{
+    font-size: 1.4rem !important;
+  }
+  div[data-v-63338994]{
+    font-size: 1rem !important;
+  }
+}
 </style>

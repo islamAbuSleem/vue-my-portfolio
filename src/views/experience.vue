@@ -69,8 +69,8 @@ export default {
   },
   methods:{
       downloadFile() {
-      axios({
-        url: "https://media-exp1.licdn.com/dms/document/C4D2DAQHIpO3JQ_hSgA/profile-treasury-document-pdf-analyzed/0/1580907306458?e=1613912400&v=beta&t=S6eSNnjnThiSRyRI0dVO0663CKMscuJybuVmhVXqLYA",
+      axios({ //https://smallpdf.com/result#r=cebd86ef4bf521beb77b8456d0677386&t=share-document
+        url: "https://smallpdf-production-files.s3.eu-west-1.amazonaws.com/ebfd395369a89945256edb79efc0b428.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIA3I33L6OR6SPA4CFZ%2F20210222%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210222T095304Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJHMEUCIQDmpXOYQdAxcHgI%2Feg8DQYgCBprLvxGmD2WBdwopYHcCQIgDMEIdx8QW4VeXEcfoGpYUHlD9syn4usMRJMoSJejCLQqvQMI0f%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw3NzQ5NjM0NTg5NzkiDN2hdVW1ZLCYnL%2BQZSqRA%2Fw1ruoGA4KCTwixCbQtp90tijEx8enY2Hi3wnQ%2F384npVFL1SWOgxZ%2FzvUfja4OopLFmZ2iiWuC%2B%2B31FJVSM7XcFxUOgFBG5xQQkcuO5ai8X%2Bur68C4hNfVBkk%2BQyOFJdkyy5q6jDFCuZ7m8szYlRPEp%2FAmKwngHxEkbbIz8vjBNy7%2Bxh5hq2d%2B20gS6YiKDI9mh9O1hZlJE8%2FYjlKuJ7AU%2FdmSISYrI5g4B3QmehlhMbSCvf2apTcCBICRvgBKY%2Biwnojy13shqCkij76VG1gs1JDhXt4%2FEwmhBdr8MpWUKXahk%2FU6Y%2FyLKQ6S4bExWf4obK2uRcqM36ymJnBiFYFYL34k2kCdKhBfg7rGNMt7hPkpsuS9NyFo9OrcuddLxoV1hlwgssaXMJyg%2BmIKVWyJI9YnkAunSc3J1Z%2FomEtofBM6A73kzcHRvJv3IGJ3q0wvVSvgj3udKz8Nlf7SSru%2F75NeWHrHEto3Seai9Ki29B3MLboWU1PEFE6aivoNSHDdhMnBp6znw0tWvQDMTfQyMKO4zYEGOusBOk9F%2Bea4lTtVpM77r0AKjewCcUR0isKs%2F1YsJdMM6mpxvYbIczt5k8TXORfOuuxdIbFtaQHwvxLFLcJnVCmsslwmuD%2BAabVmIQW79TufLl3xiXb9CTmeiFKJiaJuOnmFGETT29ABd%2F6%2B1NTW0SmdoQ5HSI%2F2JWw9dHZGdU3Ftu46BuvLZdcbMKSHLO%2F0y3QkUM4VSHQP94kIjI%2FTTswgPcp3B8B1duFOW7b9RabOtWVlsuwpeIlL2UnSWGtnm6Fqa53%2F59LfQbIxlIjZdF5aY8Po%2B3k1KgeiTKo9AjoN8Uq5izNAvnWgfsU19g%3D%3D&X-Amz-SignedHeaders=host&X-Amz-Signature=e97c80eb433f7b2af266ea3ef5730ba5061a18c48d8bee5f74f3700199591546",
         method: "GET",
         responseType: "blob" // important
       }).then(response => {
@@ -97,6 +97,20 @@ export default {
   margin: auto;
   .v-expansion-panel{
     margin: 2px auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .work-exper[data-v-fb7c0bf8]{
+    width: 100%;
+    margin: 0;
+  }
+  .row[data-v-fb7c0bf8]{
+    font-size: .7rem;
+  }
+  ul[data-v-fb7c0bf8]{
+      font-size: .7rem;
+
   }
 }
 </style>

@@ -153,4 +153,18 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+.blockquote[data-v-fae5bece]{
+    font-size: .9rem;
+  }
+  .col[data-v-fae5bece]{
+    font-size: .8rem;
+  }
+  .v-btn[data-v-fae5bece]{
+    width: 20vw;
+    height: 7vh;
+    font-size: .6rem;
+  }
+}
 </style>
