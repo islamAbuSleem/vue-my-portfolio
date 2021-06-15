@@ -3,15 +3,15 @@
         <v-card flat v-for="skill in data" :key="skill.id" class="pa-3 ml-5" max-width="800"> 
           <template>
             <v-row :class="`skill `">
-              <v-col cols="12" sm="6" class=" d-flex align-center">
-                <div class="text-capitalize grey--text text--darken-3 text-uppercase"><img :src="skill.src" alt="" v-if="skill.src"> {{skill.name}}</div>
+              <v-col cols="12" class=" d-flex align-center justify-center">
+                <div class="text-capitalize grey--text text--darken-3 text-uppercase"><img :src="skill.src" alt="" v-if="skill.src" class="mr-1"> {{skill.name}}</div>
               </v-col>
-              <v-col cols="12" sm="6">
+              <!-- <v-col cols="12" sm="6">
                 <div>
                         <v-rating v-model="skill.rate" readonly size="23" background-color="amber lighten-1"
                        color="amber"></v-rating>
                     </div>
-              </v-col>
+              </v-col> -->
             </v-row>
           </template>
         </v-card>
